@@ -1,0 +1,52 @@
+@import "src/assets/scss/layout.scss";
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+  padding: 10px;
+}
+.mat-table {
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  min-width: 600px;
+  thead {
+    background-color: $secondary-color;
+  }
+  .mat-mdc-header-row {
+    background-color: $table-header-color;
+    color: white;
+  }
+  .mat-sort-header-arrow {
+    color: white !important;
+  }
+  .mat-mdc-row:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+}
+/* Action Button */
+.icon-button {
+  color: $secondary-color;
+  display: flex;
+  align-items: center;
+}
+/* Responsive Table for Small Screens */
+@media (max-width: 768px) {
+  .mat-table {
+    display: block;
+    overflow-x: auto;
+    .mat-header-cell,
+    .mat-cell {
+      white-space: nowrap; 
+    }
+  }
+  th,
+  td {
+    padding: 8px 12px;
+  }
+  /* Hide text and only show icons for actions on mobile */
+  .icon-button span {
+    display: none;
+  }
+}

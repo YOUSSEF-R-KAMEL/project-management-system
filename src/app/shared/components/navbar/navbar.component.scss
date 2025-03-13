@@ -1,0 +1,82 @@
+@import '../../../../assets/scss/layout.scss';
+
+header {
+  height: 10vh;
+  max-width: 100%;
+}
+
+header {
+  a {
+    color: black;
+  }
+  p {
+    color: #0000005E;
+  }
+  h5 {
+    color:$secondary-color;
+    font-size: 1.2rem;
+  }
+  i {
+    color: #A7A7A7;
+  }
+}
+
+.dropdown-icon {
+  color: #A7A7A7;
+  font-size: 1.8rem;
+}
+.theme-checkbox {
+  --toggle-size: 16px;
+  appearance: none;
+  width: 4em;
+  height: 2em;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
+  background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background-size: 205%;
+  background-position: 0;
+  transition: 0.4s;
+  border-radius: 99em;
+  position: relative;
+  cursor: pointer;
+  font-size: var(--toggle-size);
+}
+
+.theme-checkbox::before {
+  content: "";
+  width: 1.125em;
+  height: 1.125em;
+  position: absolute;
+  top: 0.438em;
+  left: 0.438em;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
+  background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background-size: 205%;
+  background-position: 100%;
+  border-radius: 50%;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.theme-checkbox:checked::before {
+  left: calc(100% - 1em - 0.438em);
+  background-position: 0;
+}
+
+.theme-checkbox:checked {
+  background-position: 100%;
+}
+
+@media (max-width: 576px) {
+  .logo-container, .dropdown-container {
+    width: 50%;
+    .logo {
+      width: 80%;
+    }
+  }
+
+  .email {
+    display: none;
+  }
+}

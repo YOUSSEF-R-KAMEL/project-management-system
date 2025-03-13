@@ -1,0 +1,18 @@
+@import 'src/assets/scss/layout.scss';
+
+mat-form-field {
+  color: $secondary-color;
+  width: 25%;
+}
+
+@media (max-width: 991px) {
+  mat-form-field {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  mat-form-field {
+    width: 100%;
+  }
+}

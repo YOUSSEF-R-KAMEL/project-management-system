@@ -1,0 +1,14 @@
+<h1 mat-dialog-title [align]="'end'">
+  <mat-icon [color]="'warn'" (click)="onNoClick()" class="mat-18">cancel</mat-icon>
+</h1>
+<div mat-dialog-content>
+
+  <div class="text-center">
+    <img  [src]="data.image" alt="" [style]="data.widthImage">
+    <h3> {{data.type}} This <span class="main-bg">{{data.text}}</span>  ?</h3>
+    <p>are you sure you want to {{data.type}}  this item ? if you are sure just <br> click on {{data.type}}  it</p>
+  </div>
+</div>
+<div mat-dialog-actions [align]="'end'">
+  <button   mat-button class="button bg-danger w-25 ms-auto m-2" [mat-dialog-close]="data.id" cdkFocusInitial>{{ data.type ||data.isActivated}}</button>
+</div>

@@ -1,0 +1,51 @@
+@import "./variables";
+
+@mixin auth-section {
+  background-repeat: no-repeat !important;
+  background-position: center center;
+  background-size: cover !important;
+  min-height: 100vh;
+  @include flex-center;
+}
+@mixin login-section {
+  @include auth-section;
+  background: url("/assets/images/jpeg/login-background.jpeg");
+}
+@mixin request-reset-password-section {
+  @include auth-section;
+  background: url("../../images/jpeg/forget-password-background.jpeg");
+}
+@mixin reset-password-section {
+  @include login-section;
+}
+
+@mixin register-section {
+  @include auth-section;
+  background: url("/assets/images/jpeg/register-background.jpeg");
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin theme($light-theme: true) {
+  @if $light-theme {
+    background-color: lighten(white, 100%);
+    color: darken($secondary-color, 100%);
+  } @else {
+    background-color: lighten($secondary-color, 100%);
+    color: white;
+  }
+}
+
+@mixin auth-form {
+  background-color: $auth-bg-color;
+  padding: 3rem 3.2rem 2.5rem 3rem;
+  border-radius: 16px;
+}
+@mixin register-form {
+  @include auth-form;
+  background-color: $register-bg-color;
+}

@@ -1,0 +1,32 @@
+*{
+  transition: all .8s ease;
+}
+.row{
+  background-color: #F5F5F5;
+}
+.nav-bar{
+  z-index: 200;
+  padding: 0;
+  background: #FFF;
+  position: sticky;
+}
+.side-bar {
+  min-height: 90vh;
+}
+.sidebarClose{
+  width: 3.5rem;
+}
+.sidebarOpen{
+  width: 15%;
+}
+.dashbordSmall{
+  width: 85%;
+}
+.dashbordLarg{
+  width: calc(100% - 3.5rem);
+}
+
+.content {
+  margin-bottom: 20px;
+  padding: 20px; 
+}
