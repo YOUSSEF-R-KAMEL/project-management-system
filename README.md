@@ -66,11 +66,6 @@ ng build --configuration production
 
 ---
 
-### 🔗 License
-This project is licensed under the **MIT License**.
-
----
-
 ### 📞 Contact
 For any inquiries, reach out:
 - **GitHub:** https://github.com/YOUSSEF-R-KAMEL?tab=repositories
