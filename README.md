@@ -1,27 +1,65 @@
-# Pms
+## 📌 Project Management System (PMS)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.15.
+### 🚀 Overview
+The Project Management System (PMS) is a robust web application designed to streamline project tracking, team collaboration, and task management. Built using Angular, it offers a modern and intuitive interface for managing projects efficiently.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### 🎯 Features
+✅ **User Authentication** – Secure login, role-based access, and user management.  
+✅ **Project Management** – Create, update, and track projects with detailed progress.  
+✅ **Task Assignment** – Assign tasks to team members and monitor deadlines.  
+✅ **Collaboration Tools** – Commenting, notifications, and team communication.  
+✅ **Dashboard & Analytics** – Visual insights into project progress and performance.  
+✅ **Responsive Design** – Optimized for mobile and desktop use.  
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 🛠️ Tech Stack
+- **Frontend:** Angular, TypeScript, SCSS  
+- **State Management:** RxJS  
+- **UI Framework:** Angular Material, ngx-toastr  
+- **Backend:** Node.js (Assumed), REST API  
+- **Database:** MongoDB / PostgreSQL (Assumed)  
+- **Authentication:** JWT  
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### 📂 Project Structure
+```
+pms/
+│── src/
+│   ├── app/
+│   │   ├── core/          # Core modules & services
+│   │   ├── feature/       # Feature modules (e.g., projects, tasks, users)
+│   │   ├── shared/        # Shared components & utilities
+│   │   ├── environments/  # Environment configurations
+│── angular.json           # Angular project configuration
+│── package.json           # Dependencies & scripts
+│── README.md              # Project documentation like this
+```
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 📌 Installation & Setup
+#### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/YOUR-USERNAME/project-management-system.git
+cd project-management-system
+```
 
-## Running end-to-end tests
+#### 2️⃣ Install Dependencies
+```bash
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+#### 3️⃣ Run the Development Server
+```bash
+ng serve
+```
+Then open `http://localhost:4200/` in your browser.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### 4️⃣ Build for Production
+```bash
+ng build --configuration production
+```
