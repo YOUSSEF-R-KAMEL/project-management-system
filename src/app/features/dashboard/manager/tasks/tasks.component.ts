@@ -12,7 +12,6 @@ import { ProjectsService } from '../projects/services/projects.service';
 import { UsersService } from '../users/services/users.service';
 import { ITask } from './interfaces/task.interface';
 import { TasksService } from './services/tasks.service';
-import { BehaviorSubject, Observable } from 'rxjs';
 import { TableTypeEnum } from 'src/app/shared/enums/table-type-enum';
 
 @Component({
@@ -30,7 +29,12 @@ export class TasksComponent {
   searchValue = '';
   status = ['ToDo', 'InProgress', 'Done'];
   actions: ITableAction[] = [];
-  constructor(private dialog: MatDialog, private _projectsService: ProjectsService, private _UsersService: UsersService, private _tasksService: TasksService, private toast: ToastrService) {
+  constructor(private dialog: MatDialog,
+    private _projectsService: ProjectsService,
+    private _UsersService: UsersService,
+    private _tasksService: TasksService,
+    private toast: ToastrService
+  ) {
     this.actions = [
       {
         type: 'button',
@@ -54,11 +58,11 @@ export class TasksComponent {
         callback: (row: ITask) => this.openDeleteDialog(row),
       },
     ],
-      this.tableData = {
-        data: { data: [], pageNumber: 1, pageSize: 5, totalNumberOfRecords: 0, totalNumberOfPages: 0 },
-        columns: [],
-        actions: this.actions
-      }
+    this.tableData = {
+      data: { data: [], pageNumber: 1, pageSize: 5, totalNumberOfRecords: 0, totalNumberOfPages: 0 },
+      columns: [],
+      actions: this.actions
+    }
   }
 
   ngOnInit(): void {
@@ -88,7 +92,7 @@ export class TasksComponent {
   getUsers() {
     let myParams = {
       pageNumber: 1,
-      pageSize: 9999,
+      pageSize: 100,
     };
     this._UsersService.getUsers(myParams).subscribe({
       next: (res: IDataResponse<IUser>) => {
@@ -167,7 +171,6 @@ export class TasksComponent {
       this.tableData = { ...this.tableData, data: { ...this.tableData?.data, data: [] } };
       return;
     }
-    console.log(res);
     const excludedFields = ['id'];
     const sampleTask = res.data[0];
     this.tableData = {

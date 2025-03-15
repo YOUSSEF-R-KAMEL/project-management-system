@@ -15,7 +15,6 @@ export class TableComponent implements OnInit {
   @Input() type: TableTypeEnum = TableTypeEnum.Users;
   @Input() set tableData(data: ITableData) {
     this.data = data;
-    console.log('tableData', data);
     this.initializeTable(data);
   }
   dataSource: MatTableDataSource<any> = new MatTableDataSource();
@@ -69,7 +68,6 @@ export class TableComponent implements OnInit {
   }
 
   getTemplate(field: string): any {
-    console.log(field);
     switch (field) {
       case 'task': return 'arrayTemplate';
       case 'creationDate': return 'dateTemplate';
@@ -83,4 +81,3 @@ export class TableComponent implements OnInit {
   }
 
 }
-

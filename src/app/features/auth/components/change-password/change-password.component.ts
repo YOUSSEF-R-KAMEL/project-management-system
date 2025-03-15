@@ -32,8 +32,6 @@ export class ChangePasswordComponent {
   changePassword() {
     this.authService.changePassword(this.changePasswordForm.value).subscribe({
       next: (res: IRes) => {
-        console.log(res,'change');
-
         this.resMessage = res.message;
       },
       error: (err) => {

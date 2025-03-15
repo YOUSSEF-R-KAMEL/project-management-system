@@ -1,7 +1,23 @@
-ul
-{
-  list-style: none;
-  li{
-    padding-block: 3px;
+mat-icon {
+  height: 30px !important;
+  width: 30px !important;
+  font-size: 28px;
+  cursor: pointer;
+  transition: .2s;
+  &:hover {
+    color: #ea6b61;
   }
 }
+
+.user-image {
+  width: 150px;
+  height: 150px;
+}
+
+.info {
+  span {
+    margin-bottom: 25px;
+    display: inline-block;
+  }
+}
+

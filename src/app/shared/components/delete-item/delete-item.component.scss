@@ -2,3 +2,21 @@
 .main-bg{
   color:$primary-color ;
 }
+
+mat-icon {
+  height: 30px !important;
+  width: 30px !important;
+  font-size: 28px;
+  cursor: pointer;
+  transition: .2s;
+  &:hover {
+    color: #ea6b61;
+  }
+}
+
+button {
+  display: inherit !important;
+  &:hover {
+    background-color: #ea6b61;
+  }
+}

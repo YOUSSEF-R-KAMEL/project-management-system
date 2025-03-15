@@ -7,7 +7,6 @@ import { IUser } from './interfaces/user.interface';
 import { UsersService } from './services/users.service';
 import { ViewUserProfileComponent } from 'src/app/shared/components/view-user-profile/view-user-profile.component';
 import { DeleteItemComponent } from 'src/app/shared/components/delete-item/delete-item.component';
-import { BehaviorSubject, Observable } from 'rxjs';
 import { TableTypeEnum } from 'src/app/shared/enums/table-type-enum';
 
 

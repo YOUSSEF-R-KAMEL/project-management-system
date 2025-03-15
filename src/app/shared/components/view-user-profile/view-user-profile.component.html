@@ -1,20 +1,30 @@
-<div class="card mb-1 border-0 col-9  w-100 " >
-  <div class="row  py-5 p-2 w-100">
-    <div class="col-md-6  mx-auto"  >
-      <div class="w-75 m-auto align-items-center ">
-        <img [src]="data.item.imagePath" height="220px" onerror="this.src='assets/images/svg/profile-picture-placeholder.svg'" class="w-100 rounded-3" alt="...">
-      </div>
+<div class="card mb-1 border-0 col-9 w-100">
+  <div mat-dialog-title [align]="'end'" class="pe-3">
+    <mat-icon [color]="'warn'" (click)="onNoClick()" class="mat-18">cancel</mat-icon>
+  </div>
+  <div class="content flex-column">
+    <div class="image-container mb-5 w-100 align-items-center text-center">
+      <img class="user-image rounded-3" [src]="data.item.imagePath"
+      onerror="this.src='assets/images/svg/profile-picture-placeholder.svg'">
     </div>
-    <div class="col-md-6 d-flex align-items-center ">
-      <div class="w-100">
-        <ul class="ps-0  ">
-          <li><span class="fs-5">Name :</span>  {{data.item.userName}}</li>
-          <li> <span class="fs-5">Phone :</span>   {{data.item.phoneNumber}}</li>
-          <li> <span class="fs-5">Country :</span>   {{data.item.country}}</li>
-          <li> <span class="fs-5">activity :</span>  {{data.item.isActivated?'Active':'Not Active'}}</li>
-          <li> <span class="fs-5">Creation Date :</span>  {{ data.item.creationDate | date: "dd/MM/yyyy"}}</li>
-          <li > <span class="fs-5">Email :</span>{{data.item.email}}</li>
-        </ul>
+    <div class="info row m-0">
+      <div class="col-12 col-md-6">
+        <span class="mb-3">Name: </span><strong> {{data.item.userName}}</strong>
+      </div>
+      <div class="col-12 col-md-6">
+        <span class="mb-3">Phone: </span><strong> {{data.item.phoneNumber}}</strong>
+      </div>
+      <div class="col-12 col-md-6">
+        <span class="mb-3">Country: </span><strong> {{data.item.country}}</strong>
+      </div>
+      <div class="col-12 col-md-6">
+        <span class="mb-3">activity: </span><strong> {{data.item.isActivated?'Active':'Not Active'}}</strong>
+      </div>
+      <div class="col-12 col-md-6">
+        <span class="mb-3">Creation Date: </span><strong> {{data.item.creationDate | date: "dd/MM/yyyy"}}</strong>
+      </div>
+      <div class="col-12 col-md-6">
+        <span class="mb-3">Email: </span><strong> {{data.item.email}}</strong>
       </div>
     </div>
   </div>

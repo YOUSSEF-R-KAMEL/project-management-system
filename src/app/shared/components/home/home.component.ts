@@ -18,9 +18,9 @@ export class HomeComponent {
   tasksCount = 0;
   constructor(private _HomeService: HomeService) {}
   ngOnInit(): void {
+    this.getDataFromLocalStorage();
     this.getUsersCount();
     this.getTasksData();
-    this.getDataFromLocalStorage();
     this.getTasks();
     this.getProjects();
   }
@@ -33,22 +33,24 @@ export class HomeComponent {
     }
   }
   getUsersCount() {
-    this._HomeService.getUsresCount().subscribe({
-      next: (res: IHomeRole) => {
-        this.usersCount = res;
-      },
-      error: (err) => {},
-      complete: () => {},
-    });
+    if(this.role === 'Manager'){
+      this._HomeService.getUsresCount().subscribe({
+        next: (res: IHomeRole) => {
+          this.usersCount = res;
+        },
+      });
+    }
   }
   getTasks() {
-    this._HomeService.getTasksData().subscribe({
-      next: (res) => {
-        this.tasksCount = res.totalNumberOfRecords;
-      },
-      error: (err) => {},
-      complete: () => {},
-    });
+    if(this.role === 'Manager'){
+      this._HomeService.getTasksData().subscribe({
+        next: (res) => {
+          this.tasksCount = res.totalNumberOfRecords;
+        },
+        error: (err) => {},
+        complete: () => {},
+      });
+    }
   }
   getTasksData() {
     this._HomeService.getTasksCount().subscribe({
@@ -83,11 +85,13 @@ export class HomeComponent {
     });
   }
   getProjects() {
-    this._HomeService.getProjects().subscribe({
-      next: (res) => {
-        this.projectsCount = res.totalNumberOfRecords;
-      },
-      error: (err) => {},
-    });
+    if(this.role === 'Manager'){
+      this._HomeService.getProjects().subscribe({
+        next: (res) => {
+          this.projectsCount = res.totalNumberOfRecords;
+        },
+        error: (err) => {},
+      });
+    }
   }
 }
