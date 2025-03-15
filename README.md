@@ -38,3 +38,41 @@ pms/
 │── package.json           # Dependencies & scripts
 │── README.md              # Project documentation like this
 ```
+
+---
+
+### 📌 Installation & Setup
+#### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/YOUR-USERNAME/project-management-system.git
+cd project-management-system
+```
+
+#### 2️⃣ Install Dependencies
+```bash
+npm install
+```
+
+#### 3️⃣ Run the Development Server
+```bash
+ng serve
+```
+Then open `http://localhost:4200/` in your browser.
+
+#### 4️⃣ Build for Production
+```bash
+ng build --configuration production
+```
+
+---
+
+### 🔗 License
+This project is licensed under the **MIT License**.
+
+---
+
+### 📞 Contact
+For any inquiries, reach out:
+- **GitHub:** https://github.com/YOUSSEF-R-KAMEL?tab=repositories
+- **Email:** se.youssefrafat@gmail.com
+
